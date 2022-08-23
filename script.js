@@ -16,3 +16,13 @@ function fibs(num) {
 
     return fibonacci;
 }
+
+// Same as above, except with recursion instead of iteration
+function fibsRec(n) {
+    if (n === 1) return [0];
+    if (n === 2) return [0, 1];
+  
+    let arr = fibsRec(n - 1);
+  
+    return arr.concat(arr[arr.length - 1] + arr[arr.length - 2]);
+}
